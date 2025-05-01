@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky Mountain Board</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    .sticky-header {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      padding: 10px;
+      display: flex;
+      border-bottom: 2px solid #ccc;
+      font-weight: bold;
+      z-index: 100;
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      padding: 10px;
+    }
+
+    .cell {
+      flex: 1;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .cell.tiket {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-align: left;
+    }
+
+    .cell img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .cell .mountain-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .green {
+      color: green;
+    }
+
+    .red {
+      color: red;
+    }
+
+    .status-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-right: 5px;
+    }
+
+    .dot-open {
+      background-color: green;
+    }
+
+    .dot-closed {
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <div class="sticky-header">
+    <div class="cell">Tiket</div>
+    <div class="cell">Status</div>
+    <div class="cell">Region</div>
+    <div class="cell">Altitude</div>
+    <div class="cell">Temperature</div>
+    <div class="cell">Quota/Left</div>
+  </div>
+
+  
+<!-- Gunung 1 - Everest -->
+<div class="row">
+  <div class="cell tiket">
+    <img src="everest.jpg" alt="Everest">
+    <div class="mountain-info">
+      <strong>Everest</strong>
+      <small>$1000</small>
+    </div>
+  </div>
+  <div class="cell">
+    <span class="status-dot dot-open"></span> <span class="green">Open</span>
+  </div>
+  <div class="cell">Nepal / China</div>
+  <div class="cell">8848 meters</div>
+  <div class="cell">
+    -14ºC <br> <span>🌤 Cerah</span>
+  </div>
+  <div class="cell">
+    <span class="green">1000</span> / <span class="red">10</span>
+  </div>
+</div>
+
+<!-- Gunung 2 - Rinjani -->
+<div class="row">
+  <div class="cell tiket">
+    <img src="rinjani.jpg" alt="Rinjani">
+    <div class="mountain-info">
+      <strong>Rinjani</strong>
+      <small>$500</small>
+    </div>
+  </div>
+  <div class="cell">
+    <span class="status-dot dot-closed"></span> <span class="red">Closed</span>
+  </div>
+  <div class="cell">Indonesia</div>
+  <div class="cell">3726 meters</div>
+  <div class="cell">
+    11ºC <br> <span>⛅ Berawan</span>
+  </div>
+  <div class="cell">
+    <span class="green">150</span> / <span class="red">0</span>
+  </div>
+</div>
+
+<!-- Gunung 3 - Fuji -->
+<div class="row">
+  <div class="cell tiket">
+    <img src="fuji.jpg" alt="Fuji">
+    <div class="mountain-info">
+      <strong>Fuji</strong>
+      <small>$300</small>
+    </div>
+  </div>
+  <div class="cell">
+    <span class="status-dot dot-open"></span> <span class="green">Open</span>
+  </div>
+  <div class="cell">Japan</div>
+  <div class="cell">3776 meters</div>
+  <div class="cell">
+    -2ºC <br> <span>☁️ Mendung</span>
+  </div>
+  <div class="cell">
+    <span class="green">500</span> / <span class="red">125</span>
+  </div>
+</div>
+
+<!-- Gunung 4 - Kilimanjaro -->
+<div class="row">
+  <div class="cell tiket">
+    <img src="kilimanjaro.jpg" alt="Kilimanjaro">
+    <div class="mountain-info">
+      <strong>Kilimanjaro</strong>
+      <small>$850</small>
+    </div>
+  </div>
+  <div class="cell">
+    <span class="status-dot dot-open"></span> <span class="green">Open</span>
+  </div>
+  <div class="cell">Tanzania</div>
+  <div class="cell">5895 meters</div>
+  <div class="cell">
+    3ºC <br> <span>☀️ Cerah</span>
+  </div>
+  <div class="cell">
+    <span class="green">700</span> / <span class="red">80</span>
+  </div>
+</div>
+
+<!-- Gunung 5 - Semeru -->
+<div class="row">
+  <div class="cell tiket">
+    <img src="semeru.jpg" alt="Semeru">
+    <div class="mountain-info">
+      <strong>Semeru</strong>
+      <small>$150</small>
+    </div>
+  </div>
+  <div class="cell">
+    <span class="status-dot dot-closed"></span> <span class="red">Closed</span>
+  </div>
+  <div class="cell">Indonesia</div>
+  <div class="cell">3676 meters</div>
+  <div class="cell">
+    6ºC <br> <span>⛈ Hujan</span>
+  </div>
+  <div class="cell">
+    <span class="green">300</span> / <span class="red">5</span>
+  </div>
+</div>
