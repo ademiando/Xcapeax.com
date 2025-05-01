@@ -151,28 +151,19 @@
 
 <div class="filters">
   <div class="currency-dropdown">
-    <div class="selected-currency">
-      <span class="circle">🇺🇸</span> USD
-    </div>
-    <ul class="currency-list">
-      <li><span class="circle">🇮🇩</span> IDR</li>
-      <li><span class="circle">🇺🇸</span> USD</li>
-      <li><span class="circle">🇪🇺</span> EUR</li>
-      <li><span class="circle">🇬🇧</span> GBP</li>
-      <li><span class="circle">🇯🇵</span> JPY</li>
-      <li><span class="circle">🇦🇺</span> AUD</li>
-      <li><span class="circle">🇨🇦</span> CAD</li>
-      <li><span class="btc-circle">₿</span> BTC</li>
-    </ul>
+  <div class="selected" onclick="toggleDropdown()">
+    <span class="circle usd">💵</span>
+    <span>USD</span>
   </div>
-
-  <select>
-    <option>Country: Global</option>
-  </select>
-  <button>#Top</button>
-</div>
-  <button>#Top</button>
-</div>
+  <div class="options hidden">
+    <div onclick="selectCurrency('USD', '💵', 'usd')"><span class="circle usd">💵</span> USD</div>
+    <div onclick="selectCurrency('IDR', '💶', 'idr')"><span class="circle idr">💶</span> IDR</div>
+    <div onclick="selectCurrency('BTC', '₿', 'btc')"><span class="circle btc">₿</span> BTC</div>
+    <div onclick="selectCurrency('EUR', '💶', 'eur')"><span class="circle eur">💶</span> EUR</div>
+    <div onclick="selectCurrency('GBP', '💷', 'gbp')"><span class="circle gbp">💷</span> GBP</div>
+    <div onclick="selectCurrency('JPY', '💴', 'jpy')"><span class="circle jpy">💴</span> JPY</div>
+  </div>
+  </div>
 
 <div class="mountain-list">
   <!-- Mountain 1 -->
