@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Xcapeak</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background-color: #f4f4f4;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: silver;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .search-bar input {
+      width: 300px;
+      padding: 5px;
+    }
+
+    .menu-icon {
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .banner {
+      width: 100%;
+      height: 50px;
+      background-color: orange;
+      text-align: center;
+      line-height: 50px;
+      font-size: 18px;
+      color: white;
+      font-weight: bold;
+    }
+
+    .tagline {
+      text-align: center;
+      margin: 10px 0;
+      font-size: 20px;
+      font-style: italic;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 0;
+      background-color: #f9f9f9;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .tabs a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .filters {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 10px 20px;
+    }
+
+    .filters select, .filters button {
+      padding: 5px 10px;
+    }
+
+    .sticky-header {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      display: flex;
+      font-weight: bold;
+      padding: 12px 20px;
+      border-bottom: 2px solid #ccc;
+      z-index: 100;
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      padding: 12px 20px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .cell {
+      flex: 1;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .cell.tiket {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-align: left;
+    }
+
+    .cell img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    .mountain-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .green { color: green; }
+    .red { color: red; }
+
+    .status-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-right: 5px;
+    }
+
+    .dot-open { background-color: green; }
+    .dot-closed { background-color: red; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Xcapeak</div>
+  <div class="search-bar">
+    <input type="text" placeholder="Search...">
+    <div class="menu-icon">☰</div>
+  </div>
+</header>
+
+<div class="banner">Banner Ads</div>
+
+<div class="tagline">The global mountain trail community</div>
+
+<nav class="tabs">
+  <a href="#">Mountain</a>
+  <a href="#">Favorite</a>
+  <a href="#">Community</a>
+  <a href="#">News</a>
+  <a href="#">Gear</a>
+</nav>
+
+<div class="filters">
+  <select>
+    <option>Currency: USD</option>
+    <option>BTC</option>
+    <option>USD</option>
+    <option>IDR</option>
+    <option>EUR</option>
+    <option>AUD</option>
+    <option>JPY</option>
+  </select>
+  <select>
+    <option>Country: Global</option>
+    <option>Indonesia</option>
+    <option>India</option>
+    <option>China</option>
+    <option>Pakistan</option>
+    <option>Japan</option>
+    <option>America</option>
+    <option>Mexico</option>
+    <option>Australia</option>
+  </select>
+  <select>
+    <option>#Top Global</option>
+    <option>Top 7 Summit</option>
+    <option>Treanding</option>
+    <option>Most Visited</option>
+    <option>Volcano</option>
+    <option>Himalaya's</option>
+  </select>
+</div>
+
+<div class="sticky-header">
+  <div class="cell">Tiket</div>
+  <div class="cell">Status</div>
+  <div class="cell">Region</div>
+  <div class="cell">Altitude</div>
+  <div class="cell">Temperature</div>
+  <div class="cell">Quota/Left</div>
+</div>
+
+<div class="row">
+  <div class="cell tiket">
+    <img src="everest.jpg" alt="Everest">
+    <div class="mountain-info">
+      <strong>Everest</strong>
+      <small>$1000</small>
+    </div>
+  </div>
+  <div class="cell"><span class="status-dot dot-open"></span> <span class="green">Open</span></div>
+  <div class="cell">Nepal / China</div>
+  <div class="cell">8848 meters</div>
+  <div class="cell">-14ºC <br> 🌤 Cerah</div>
+  <div class="cell"><span class="green">1000</span> / <span class="red">10</span></div>
+</div>
+
+</body>
+</html>
+
+<div class="row">
+  <div class="cell tiket">
+    <img src="fuji.jpg" alt="Fuji">
+    <div class="mountain-info">
+      <strong>Fuji</strong>
+      <small>$300</small>
+    </div>
+  </div>
+  <div class="cell"><span class="status-dot dot-open"></span> <span class="green">Open</span></div>
+  <div class="cell">Japan</div>
+  <div class="cell">3776 meters</div>
+  <div class="cell">2ºC <br> ☁️ Cloudy</div>
+  <div class="cell"><span class="green">500</span> / <span class="red">45</span></div>
+</div>
+
+<div class="row">
+  <div class="cell tiket">
+    <img src="kilimanjaro.jpg" alt="Kilimanjaro">
+    <div class="mountain-info">
+      <strong>Kilimanjaro</strong>
+      <small>$800</small>
+    </div>
+  </div>
+  <div class="cell"><span class="status-dot dot-open"></span> <span class="green">Open</span></div>
+  <div class="cell">Tanzania</div>
+  <div class="cell">5895 meters</div>
+  <div class="cell">6ºC <br> ☀️ Sunny</div>
+  <div class="cell"><span class="green">600</span> / <span class="red">50</span></div>
+</div>
+
+<div class="row">
+  <div class="cell tiket">
+    <img src="semeru.jpg" alt="Semeru">
+    <div class="mountain-info">
+      <strong>Semeru</strong>
+      <small>$150</small>
+    </div>
+  </div>
+  <div class="cell"><span class="status-dot dot-closed"></span> <span class="red">Closed</span></div>
+  <div class="cell">Indonesia</div>
+  <div class="cell">3676 meters</div>
+  <div class="cell">10ºC <br> ⛈ Rainy</div>
+  <div class="cell"><span class="green">300</span> / <span class="red">0</span></div>
+</div>
+
+<div class="row">
+  <div class="cell tiket">
+    <img src="elbrus.jpg" alt="Elbrus">
+    <div class="mountain-info">
+      <strong>Elbrus</strong>
+      <small>$700</small>
+    </div>
+  </div>
+  <div class="cell"><span class="status-dot dot-open"></span> <span class="green">Open</span></div>
+  <div class="cell">Russia</div>
+  <div class="cell">5642 meters</div>
+  <div class="cell">-5ºC <br> ❄️ Snowy</div>
+  <div class="cell"><span class="green">200</span> / <span class="red">5</span></div>
+</div>
+
+<div class="row">
+  <div class="cell tiket">
+    <img src="carstensz.jpg" alt="Carstensz Pyramid">
+    <div class="mountain-info">
+      <strong>Carstensz Pyramid</strong>
+      <small>$1200</small>
+    </div>
+  </div>
+  <div class="cell"><span class="status-dot dot-open"></span> <span class="green">Open</span></div>
+  <div class="cell">Indonesia (Papua)</div>
+  <div class="cell">4884 meters</div>
+  <div class="cell">7ºC <br> 🌧 Rainy</div>
+  <div class="cell"><span class="green">100</span> / <span class="red">25</span></div>
+</div>
