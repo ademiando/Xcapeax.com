@@ -15,14 +15,9 @@
 
     .header {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
       align-items: center;
       padding: 20px;
-    }
-
-    .title {
-      font-size: 22px;
-      font-weight: bold;
     }
 
     .menu-container {
@@ -46,10 +41,17 @@
       padding: 16px;
       box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
       z-index: 999;
+
+      opacity: 0;
+      transform: translateX(30px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      pointer-events: none;
     }
 
-    .hidden {
-      display: none;
+    .menu-visible {
+      opacity: 1;
+      transform: translateX(0);
+      pointer-events: auto;
     }
 
     .menu-button {
@@ -108,11 +110,10 @@
 <body>
 
   <div class="header">
-    <div class="title">Tombol Hamburger</div>
-    <div class="menu-container">
+    <div class="menu-container" id="menuContainer">
       <button id="hamburger">&#9776;</button>
 
-      <div id="menu" class="menu hidden">
+      <div id="menu" class="menu">
         <button class="menu-button">Login</button>
 
         <select id="language">
@@ -138,12 +139,20 @@
   <script>
     const hamburger = document.getElementById('hamburger');
     const menu = document.getElementById('menu');
+    const menuContainer = document.getElementById('menuContainer');
     const lightBtn = document.getElementById('lightBtn');
     const darkBtn = document.getElementById('darkBtn');
     const themeBtns = [lightBtn, darkBtn];
 
-    hamburger.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
+    hamburger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      menu.classList.toggle('menu-visible');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!menuContainer.contains(e.target)) {
+        menu.classList.remove('menu-visible');
+      }
     });
 
     lightBtn.addEventListener('click', () => {
@@ -158,11 +167,7 @@
 
     function setActiveTheme(activeId) {
       themeBtns.forEach(btn => {
-        if (btn.id === activeId) {
-          btn.classList.add('active');
-        } else {
-          btn.classList.remove('active');
-        }
+        btn.classList.toggle('active', btn.id === activeId);
       });
     }
   </script>
